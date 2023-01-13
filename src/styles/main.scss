@@ -7,6 +7,38 @@
 
 // Write your sass code here or import partials
 
-h1 {
-  color: tomato;
+
+// ABOUT
+#about {
+    border: 1px solid red;
+    @include flex;
+    gap: 1rem;
+    padding: 2rem;
+    .sujin-pic {
+        width: 200px;
+        height: 200px;
+        background-image: url(../img/sujin-pic.jpg);
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        box-shadow:  20px 20px 49px #d3d3d3,
+                    -20px -20px 49px #ededed;
+        filter: grayscale(0.8);
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1rem;
+    }
 }
+
+
+

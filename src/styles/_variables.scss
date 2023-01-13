@@ -15,3 +15,16 @@
 // );
 
 // $spacer: 1rem;
+
+$colors: (
+    "primary-color": #000,
+    "secondary-color": #234,
+    "tertiary-color": #457
+);
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
