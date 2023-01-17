@@ -11,147 +11,146 @@
     <link rel="stylesheet" href="styles/main.scss" />
   </head>
   <body>
-    <!-- HEADER -->
+    <!------------- HEADER ----------------->
     <header>
-      <!-- <nav>
-        <label for="menu"></label>
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
           <i class="fa-solid fa-bars"></i>
+        </label>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li>
+            <a href="index.html">Home</a>
+            <!-- <div class="underline"></div> -->
+          </li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav> -->
-
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>
-
-            </ul>
-          </div>
-        </div>
       </nav>
     </header>
 
     <!-------------------- MAIN ----------------------->
-    <main>
+    <main id="about">
       <!------- ABOUT ---------->
-      <section id="about">
+      <section class="about">
         <div class="sujin-pic"></div>
         <h1>Sujin Grebhahn-Yang</h1>
-        <h2>Front-End Developer</h2>
+        <h2 class="job-title">Front-End Developer</h2>
         <p>Hi, I'm a front-end developer</p>
       </section>
 
       <!--------- SOCIAL MEDIA BTN ---------->
-      <section class="social-media">
-        <i class="fa-brands fa-github"></i>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-solid fa-file-invoice"></i>
+      <section class="social-media-container">
+        <section class="icons">
+          <a href="" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="http://" target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="http://" target="_blank"
+            ><i class="fa-solid fa-file-invoice"></i
+          ></a>
+        </section>
       </section>
-      <button class="scroll-btn">Scroll Down</button>
 
       <!------- PROJECTS ---------->
-      <section id="projects">
+      <section class="projects" id="projects">
         <h2>Projects</h2>
         <article class="project first">
-          <h3>Project Name</h3>
-          <div class="screenshot pj1"></div>
+          <h3>Speaker Shop</h3>
+          <p>HTML, CSS, SASS</p>
           <div class="btn-page one">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-solid fa-display"></i>
+            <a href="https://github.com/FbW22-E10/10_01_2023_uib-framework-sassy-speaker-shop_ex1-grebhahnyang.git" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <!-- <a href="http://" target="_blank"><i class="fa-solid fa-display"></i></a> -->
           </div>
         </article>
 
         <article class="project second">
-          <h3>Project Name</h3>
-          <div class="screenshot pj2"></div>
+          <h3>ZOOM Session</h3>
+          <p>HTML, CSS</p>
           <div class="btn-page two">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-solid fa-display"></i>
+            <a href="http://" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <!-- <a href="http://" target="_blank"><i class="fa-solid fa-display"></i></a> -->
           </div>
-
         </article>
 
         <article class="project third">
-          <h3>Project Name</h3>
-          <div class="screenshot pj3"></div>
+          <h3>Doughnut Shop</h3>
+          <p>HTML, CSS</p>
           <div class="btn-page three">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-solid fa-display"></i>
+            <a href="http://" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <!-- <a href="http://" target="_blank"><i class="fa-solid fa-display"></i></a> -->
           </div>
-
         </article>
 
         <article class="project fourth">
-          <h3>Project Name</h3>
-          <div class="screenshot pj4"></div>
-          <div class="btn-page fourth">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-solid fa-display"></i>
+          <h3>Travel Destination</h3>
+          <p>HTML, CSS</p>
+          <div class="btn-page four">
+            <a href="http://" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <!-- <a href="http://" target="_blank"><i class="fa-solid fa-display"></i></a> -->
           </div>
         </article>
 
         <article class="project fifth">
-          <h3>Project Name</h3>
-          <div class="screenshot pj5"></div>
+          <h3>Music Player</h3>
+          <p>HTML, CSS</p>
           <div class="btn-page five">
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-solid fa-display"></i>
+            <a href="http://" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <!-- <a href="http://" target="_blank"><i class="fa-solid fa-display"></i></a> -->
           </div>
         </article>
       </section>
     </main>
 
-
-
     <!---------------------- FOOTER ------------------------------>
-    <footer>
+    <footer id="contact">
+      <h2>Contact</h2>
       <section class="footer-container">
-        <section class="footer-socialMedia">
-          <i class="fa-brands fa-github"></i>
-          <i class="fa-brands fa-linkedin"></i>
-        </section>
         <!--------- CONTACT FORM ---------->
-        <h2 id="contact">Contact</h2>
-        <form action="POST">
-          <div class="name">
-            <label for="name">Name:</label>
-            <input type="text" id="name">
-          </div>
-          <div class="email">
-            <label for="email">E-Mail:</label>
-            <input type="text" id="email">
-          </div>
-          <div class="message">
-            <label for="message">Message:</label>
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
-          </div>
-          <button type="submit" class="submit">Send Message</button>
-        </form>
-        <p> &#169; 2023 Sujin Grebhahn-Yang</p>
-        <button type="button" class="top" id="about">
-          <i class="fa-solid fa-arrow-up"></i>
-        </button>
+        <div class="contact">
+          <form action="POST">
+            <div class="name">
+              <label for="name">Name:</label>
+              <input type="text" id="name" required />
+            </div>
+            <div class="email">
+              <label for="email">E-Mail:</label>
+              <input type="text" id="email" required />
+            </div>
+            <div class="message">
+              <label for="message">Message:</label>
+              <textarea name="message" id="message"></textarea>
+            </div>
+            <button type="submit" class="submit">Send Message</button>
+          </form>
+        </div>
+        <!-- FOOTER SOCIAL MEDIA -->
+        <section class="footer-socialMedia">
+          <a href="http://" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="http://" target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </section>
       </section>
+
+      <!-- COPYRIGHT -->
+      <p>&#169; 2023 Sujin Grebhahn-Yang</p>
+      <button type="button" class="top">
+        <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+      </button>
     </footer>
   </body>
 </html>

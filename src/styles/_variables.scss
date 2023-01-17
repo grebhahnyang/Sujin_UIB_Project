@@ -16,15 +16,24 @@
 
 // $spacer: 1rem;
 
-$colors: (
-    "primary-color": #000,
-    "secondary-color": #234,
-    "tertiary-color": #457
-);
+// $colors: (
+//     "primary-color": #197278,
+//     "secondary-color": #283d3b,
+//     "tertiary-color": #edddd4
+// );
+
+// WEBPAGE COLOR
+$primary-color: #bf9aca;
+$secondary-color: #edaec0;
+$tertiary-color: #464d77;
+
+// FONT COLOR
+$main-font-color: #eee;
+$menu-font-color: $secondary-color;
 
 @mixin flex {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    
 }
