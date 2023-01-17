@@ -23,17 +23,16 @@
 // );
 
 // WEBPAGE COLOR
-$primary-color: #bf9aca;
-$secondary-color: #edaec0;
-$tertiary-color: #464d77;
+$primary-color: rgb(191, 154, 202);
+$secondary-color: rgb(237, 174, 192);
+$tertiary-color: rgb(70, 77, 119);
 
 // FONT COLOR
-$main-font-color: #eee;
-$menu-font-color: $secondary-color;
+$main-font-color: rgb(238, 238, 238);
+
 
 @mixin flex {
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center; 
 }

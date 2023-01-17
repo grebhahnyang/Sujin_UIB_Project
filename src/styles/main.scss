@@ -4,6 +4,7 @@
 
 @import "variables";
 @import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./override";
 
 // Write your sass code here or import partials
 body {
@@ -18,7 +19,6 @@ nav {
   background-color: $primary-color;
   width: 100%;
   line-height: 5rem;
-
   position: fixed;
   z-index: 99;
   //   z-index works only with positioned elements.
@@ -35,12 +35,13 @@ nav {
   .checkbtn {
     position: fixed;
     right: 1rem;
-    top: 0.5rem;
+    top: 1rem;
     font-size: 3rem;
     cursor: pointer;
   }
   ul {
     padding-left: 0;
+    margin-bottom: 0;
     position: fixed;
     z-index: 99;
     width: 100%;
@@ -54,6 +55,7 @@ nav {
       transition: all 0.3s ease-in-out;
       &:hover {
         background-color: $secondary-color;
+        text-shadow: 0px 3px 3px rgba(130, 148, 242, 0.5);
       }
       a {
         text-decoration: none;
@@ -112,8 +114,12 @@ main {
   .job-title {
     font-size: 1.8rem;
   }
-  p {
-    font-size: 1.2rem;
+  .bio {
+    width: 80%;
+    margin: 5rem 0;
+    p {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -134,6 +140,9 @@ main {
         transform: scale(1.1);
         border-bottom: 3px solid $secondary-color;
         padding-bottom: 10px;
+      }
+      &:active {
+        transform: scale(0.9);
       }
     }
   }
@@ -251,6 +260,12 @@ footer {
     height: 30px;
     margin: 10px auto;
   }
+  input[type="text"],
+  textarea {
+    &:focus {
+      outline: 3px solid $primary-color;
+    }
+  }
   textarea {
     width: 100%;
     height: 10rem;
@@ -263,22 +278,41 @@ footer {
     background-color: $primary-color;
     color: $main-font-color;
     display: block;
+    padding: 0.5rem 1rem;
     margin: 5rem auto;
     // added display:block to make margin:block work.
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: 0.5s;
     &:hover {
       background-color: $secondary-color;
-      transform: scale(1.1);
       box-shadow: 0px 15px 20px rgba(238, 238, 238, 0.4);
+      text-shadow: 0px 3px 3px rgba(130, 148, 242, 0.5);
+      transform: scale(1.1);
       transform: translateY(-7px);
+    }
+    &:active {
+      transform: scale(0.9);
     }
   }
   // FOOTER SOCIAL MEDIA
   .footer-socialMedia {
-    text-align: center;
     font-size: 3rem;
-    margin: 7rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 10rem 0;
+    i {
+      transition: 0.3s ease-out;
+      &:hover {
+        transform: scale(1.1);
+        border-bottom: 3px solid $secondary-color;
+        padding-bottom: 10px;
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+    }
   }
   // COPYRIGHT
   p {
@@ -299,11 +333,18 @@ footer {
     font-size: 2.5rem;
     background-color: $primary-color;
     color: $main-font-color;
+    &:hover {
+      box-shadow: 0px 0px 20px 1px #ffbb763f;
+      border: 1px solid rgba(255, 255, 255, 0.454);
+    }
   }
 }
 
 @media (min-width: 768px) {
   nav {
+    .checkbtn {
+      display: none;
+    }
     ul {
       @include flex;
       gap: 3rem;
@@ -316,19 +357,51 @@ footer {
       width: 30rem;
       height: 30rem;
     }
+    .bio {
+      width: 50%;
+    }
   }
-  .checkbtn {
-    display: none;
+  .social-media-container {
+    .icons {
+      font-size: 4rem;
+      gap: 5rem;
+    }
   }
-
-  .project {
-    width: 60%;
-    height: 45vh;
+  .projects {
+    h2 {
+      font-size: 4rem;
+    }
+    .project {
+      width: 60%;
+      height: 45vh;
+    }
   }
-
-  form {
-    width: 60%;
-    margin: 0 auto;
+  footer {
+    h2 {
+      font-size: 4rem;
+    }
+    form {
+      width: 70%;
+      margin: 0 auto;
+      label {
+        font-size: 1.5rem;
+      }
+      input:not(form > input) {
+        height: 3rem;
+        margin: 1.5rem auto;
+      }
+      textarea {
+        height: 12rem;
+      }
+    }
+    .footer-socialMedia {
+      font-size: 4rem;
+    }
+    button[type="button"] {
+      width: 4rem;
+      height: 4rem;
+      font-size: 3rem;
+    }
   }
 }
 
@@ -349,8 +422,16 @@ footer {
     .job-title {
       font-size: 3rem;
     }
-    p {
-      font-size: 1.5rem;
+    .bio {
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .social-media-container {
+    .icons {
+      font-size: 5rem;
+      gap: 7rem;
     }
   }
   .project {
@@ -374,14 +455,25 @@ footer {
       .contact {
         flex-basis: 70%;
         margin-bottom: 7rem;
+        label {
+          font-size: 2rem;
+        }
+        input:not(form > input) {
+          margin: 1.5rem auto;
+        }
+        textarea {
+          height: 15rem;
+        }
+        button[type="submit"] {
+          padding: 0.5rem 1rem;
+        }
       }
       .footer-socialMedia {
-        display: flex;
         align-items: flex-start;
         justify-content: flex-start;
-        gap: 3rem;
+        gap: 6rem;
         flex-basis: 30%;
-        font-size: 4rem;
+        font-size: 5rem;
       }
     }
     button[type="button"] {
